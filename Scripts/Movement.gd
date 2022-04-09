@@ -1,9 +1,13 @@
 extends KinematicBody2D
 
-onready var _animated_sprite = $AnimatedSprite
+onready var player = $AnimatedSprite
 
-var speed = 100  # speed in pixels/sec
-var velocity = Vector2.ZERO
+var speed : int = 100  # speed in pixels/sec
+var velocity : Vector2 = Vector2.ZERO
+var isAttacking : bool = false
+
+func _ready():
+	player.connect("animation_finished" , self, "checkAnimation")
 
 func getInput():
 	velocity = Vector2.ZERO
@@ -25,13 +29,23 @@ func flipSprite():
 		get_node("AnimatedSprite").set_flip_h(true)		
 
 func playAnimation():
-	if Input.is_action_pressed("right") == true || Input.is_action_pressed("left") == true || Input.is_action_pressed("up") == true || Input.is_action_pressed("down") == true:
-		_animated_sprite.play("Run")
-	else:
-		_animated_sprite.play("Idle")
-				
+	if (isAttacking == false):
+		if Input.is_action_pressed("right") == true || Input.is_action_pressed("left") == true || Input.is_action_pressed("up") == true || Input.is_action_pressed("down") == true:
+			player.play("Run")
+		else:
+			player.play("Idle")
 
+func attack():
+	if Input.is_action_pressed("attack"):
+		player.play("Attack")
+		isAttacking = true
+		
+func checkAnimation():
+	if player.get_animation() == "Attack":
+		isAttacking = false
+	
 func _physics_process(delta):
+	attack()
 	getInput()
 	flipSprite()
 	playAnimation()
