@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/FPSCounter.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 222, 174 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 276, 174 )
+scale = Vector2( 2.24, 1 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 27.0
+margin_top = 29.0
+margin_right = 67.0
+margin_bottom = 43.0
+script = ExtResource( 2 )
