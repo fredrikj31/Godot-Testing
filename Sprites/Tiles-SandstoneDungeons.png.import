@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/baby.png-5e4e6e5b998a0e4c0391b97a9ac3a38e.stex"
+path="res://.import/Tiles-SandstoneDungeons.png-f33574a4b4bb445bff8a5ef6d15efe55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/baby.png"
-dest_files=[ "res://.import/baby.png-5e4e6e5b998a0e4c0391b97a9ac3a38e.stex" ]
+source_file="res://Sprites/Tiles-SandstoneDungeons.png"
+dest_files=[ "res://.import/Tiles-SandstoneDungeons.png-f33574a4b4bb445bff8a5ef6d15efe55.stex" ]
 
 [params]
 

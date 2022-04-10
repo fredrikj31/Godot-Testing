@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tileset.png-1a414b7107dec576154e767e32be6ae4.stex"
+path="res://.import/Tiles-Items-pack.png-aa55476d255a0555f72641f7fa985a50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tileset.png"
-dest_files=[ "res://.import/Tileset.png-1a414b7107dec576154e767e32be6ae4.stex" ]
+source_file="res://Sprites/Tiles-Items-pack.png"
+dest_files=[ "res://.import/Tiles-Items-pack.png-aa55476d255a0555f72641f7fa985a50.stex" ]
 
 [params]
 
